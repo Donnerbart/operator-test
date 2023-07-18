@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- Operator -->
+    <logger name="de.donnerbart.operator" level="INFO"/>
+
+    <!-- Operator framework -->
+    <logger name="io.fabric8.kubernetes" level="INFO"/>
+    <logger name="io.javaoperatorsdk.operator" level="INFO"/>
+    <logger name="io.quarkus" level="INFO"/>
+    <logger name="jakarta.json" level="INFO"/>
+
+    <!-- Network -->
+    <logger name="io.netty" level="WARN"/>
+    <logger name="io.vertx" level="WARN"/>
+    <logger name="org.jboss.resteasy" level="WARN"/>
+</configuration>
